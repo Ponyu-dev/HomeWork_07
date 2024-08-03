@@ -1,4 +1,4 @@
-package otus.homework.customview.pie_chart
+package otus.homework.customview.pieChart
 
 import android.graphics.Color
 import android.graphics.CornerPathEffect
