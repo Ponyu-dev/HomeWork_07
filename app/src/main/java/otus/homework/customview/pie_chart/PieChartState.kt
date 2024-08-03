@@ -9,5 +9,4 @@ import android.view.View.BaseSavedState
 class PieChartState(
     private val superSavedState: Parcelable?,
     val dataList: List<PieChartData>
-) : BaseSavedState(superSavedState), Parcelable {
-}
+) : BaseSavedState(superSavedState), Parcelable

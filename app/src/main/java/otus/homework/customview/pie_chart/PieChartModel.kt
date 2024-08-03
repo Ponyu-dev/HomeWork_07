@@ -3,6 +3,7 @@ package otus.homework.customview.pie_chart
 import android.graphics.Color
 import android.graphics.CornerPathEffect
 import android.graphics.Paint
+import android.util.Log
 
 /**
  * Представляет собой модель хранения смежной информации о рисуемом объекте диаграммы.
@@ -25,7 +26,7 @@ data class PieChartModel(
     var colorOfLine: Int = 0,
     var stroke: Float = 0F,
     var paint: Paint = Paint(),
-    var paintRound: Boolean = true
+    var paintRound: Boolean = false
 ){
     /**
      * Блок, в котором значения преобразуются к приближенным значениям круговой диаграммы.
@@ -67,5 +68,7 @@ data class PieChartModel(
             paint.strokeCap = Paint.Cap.ROUND;
             paint.pathEffect = CornerPathEffect(8F);
         }
+
+        Log.d("Angle", "percentToStartAt = $percentToStartAt percentOfCircle = $percentOfCircle ${colorOfLine.toString()}")
     }
 }
