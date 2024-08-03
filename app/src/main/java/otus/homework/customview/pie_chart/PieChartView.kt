@@ -140,10 +140,10 @@ class PieChartView @JvmOverloads constructor(
     }
 
     override fun onRestoreInstanceState(state: Parcelable?) {
-        val PieChartState = state as? PieChartState
-        super.onRestoreInstanceState(PieChartState?.superState ?: state)
+        val pieChartState = state as? PieChartState
+        super.onRestoreInstanceState(pieChartState?.superState ?: state)
 
-        dataList = PieChartState?.dataList ?: listOf()
+        dataList = pieChartState?.dataList ?: listOf()
     }
 
     override fun onSaveInstanceState(): Parcelable {
